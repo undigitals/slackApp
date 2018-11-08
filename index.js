@@ -1,6 +1,7 @@
 import express from 'express';
 import bodyParser from 'body-parser';
 import GraphqlHTTP from 'express-graphql'
+// Apollo 1
 //import { graphqlExpress, graphiqlExpress } from 'apollo-server-express';
 import { makeExecutableSchema } from 'graphql-tools';
 
@@ -19,23 +20,3 @@ import resolvers from './resolvers';
  //app.use('/graphiql', graphiqlExpress({ endpointURL: graphqlEndpoint }));
  app.listen(8081);
 
-
-
-// import express from 'express'
-// import bodyParser from 'body-parser'
-// import { graphqlExpress } from 'apollo-server-express'
-// import { makeExecutableSchema } from 'graphql-tools';
-
-// import typeDefs from './schema'
-// import resolvers from './resolvers'
-
-// export const schema = makeExecutableSchema({
-//   typeDefs,
-//   resolvers,
-// });
-
-// const app = express();
-
-// app.use('/graphql', bodyParser.json(), graphqlExpress({ schema }));
-
-// app.listen(8080);
